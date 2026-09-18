@@ -1,0 +1,13 @@
+SELECT *
+FROM POS.Orders
+WHERE RiderId IS NOT NULL
+	AND Id IN (
+	SELECT OrderId
+	FROM POS.OrderPaymentMethods
+	);
+
+SELECT 
+	RiderId, * 
+FROM POS.ORDERS
+WHERE ExternalId = '27296'
+ORDER BY ID DESC;
